@@ -5,4 +5,5 @@ export default {
     "^.+.tsx?$": ["ts-jest", {}],
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
+  setupFilesAfterEnv: ["./testSetup.ts"],
 };
