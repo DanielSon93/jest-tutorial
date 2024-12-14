@@ -1,15 +1,6 @@
-export function successPromise() {
-  return Promise.resolve("success");
-}
+import * as asynfnc from "./asyncFunctions";
 
-export function failPromise() {
-  return Promise.reject("fail");
-}
-
-export async function successAsync() {
-  return "success";
-}
-
-export async function failAsync() {
-  throw "fail";
-}
+test("async/await 사용한 방식", async () => {
+  jest.spyOn(asynfnc, "successPromise").mockResolvedValue("success");
+  return expect(asynfnc.successPromise()).resolves.toBe("success");
+});

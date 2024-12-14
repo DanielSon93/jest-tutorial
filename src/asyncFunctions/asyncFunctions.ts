@@ -1,10 +1,15 @@
-import {
-  successPromise,
-  failPromise,
-  successAsync,
-  failAsync,
-} from "./asyncFunctions.test";
+export function successPromise() {
+  return Promise.resolve("success");
+}
 
-test("successPromise 테스트", () => {
-  expect(successPromise()).resolves.toBe("success");
-});
+export function failPromise() {
+  return Promise.reject("fail");
+}
+
+export async function successAsync() {
+  return "success";
+}
+
+export async function failAsync() {
+  throw "fail";
+}
