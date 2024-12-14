@@ -1,5 +1,5 @@
 export function timer(callback) {
   setTimeout(() => {
     callback("hello");
-  }, 3000);
+  }, 10 * 1000);
 }
